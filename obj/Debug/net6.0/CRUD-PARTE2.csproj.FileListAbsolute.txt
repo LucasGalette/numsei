@@ -1,0 +1,15 @@
+C:\Users\Aluno\source\repos\CRUD-PARTE2\bin\Debug\net6.0\CRUD-PARTE2.exe
+C:\Users\Aluno\source\repos\CRUD-PARTE2\bin\Debug\net6.0\CRUD-PARTE2.deps.json
+C:\Users\Aluno\source\repos\CRUD-PARTE2\bin\Debug\net6.0\CRUD-PARTE2.runtimeconfig.json
+C:\Users\Aluno\source\repos\CRUD-PARTE2\bin\Debug\net6.0\CRUD-PARTE2.dll
+C:\Users\Aluno\source\repos\CRUD-PARTE2\bin\Debug\net6.0\CRUD-PARTE2.pdb
+C:\Users\Aluno\source\repos\CRUD-PARTE2\obj\Debug\net6.0\CRUD-PARTE2.csproj.AssemblyReference.cache
+C:\Users\Aluno\source\repos\CRUD-PARTE2\obj\Debug\net6.0\CRUD-PARTE2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Aluno\source\repos\CRUD-PARTE2\obj\Debug\net6.0\CRUD-PARTE2.AssemblyInfoInputs.cache
+C:\Users\Aluno\source\repos\CRUD-PARTE2\obj\Debug\net6.0\CRUD-PARTE2.AssemblyInfo.cs
+C:\Users\Aluno\source\repos\CRUD-PARTE2\obj\Debug\net6.0\CRUD-PARTE2.csproj.CoreCompileInputs.cache
+C:\Users\Aluno\source\repos\CRUD-PARTE2\obj\Debug\net6.0\CRUD-PARTE2.dll
+C:\Users\Aluno\source\repos\CRUD-PARTE2\obj\Debug\net6.0\refint\CRUD-PARTE2.dll
+C:\Users\Aluno\source\repos\CRUD-PARTE2\obj\Debug\net6.0\CRUD-PARTE2.pdb
+C:\Users\Aluno\source\repos\CRUD-PARTE2\obj\Debug\net6.0\CRUD-PARTE2.genruntimeconfig.cache
+C:\Users\Aluno\source\repos\CRUD-PARTE2\obj\Debug\net6.0\ref\CRUD-PARTE2.dll
