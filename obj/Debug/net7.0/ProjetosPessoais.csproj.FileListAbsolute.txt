@@ -1,0 +1,15 @@
+C:\Users\user\source\repos\ProjetosPessoais\bin\Debug\net7.0\ProjetosPessoais.exe
+C:\Users\user\source\repos\ProjetosPessoais\bin\Debug\net7.0\ProjetosPessoais.deps.json
+C:\Users\user\source\repos\ProjetosPessoais\bin\Debug\net7.0\ProjetosPessoais.runtimeconfig.json
+C:\Users\user\source\repos\ProjetosPessoais\bin\Debug\net7.0\ProjetosPessoais.dll
+C:\Users\user\source\repos\ProjetosPessoais\bin\Debug\net7.0\ProjetosPessoais.pdb
+C:\Users\user\source\repos\ProjetosPessoais\obj\Debug\net7.0\ProjetosPessoais.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\ProjetosPessoais\obj\Debug\net7.0\ProjetosPessoais.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\source\repos\ProjetosPessoais\obj\Debug\net7.0\ProjetosPessoais.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\ProjetosPessoais\obj\Debug\net7.0\ProjetosPessoais.AssemblyInfo.cs
+C:\Users\user\source\repos\ProjetosPessoais\obj\Debug\net7.0\ProjetosPessoais.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\ProjetosPessoais\obj\Debug\net7.0\ProjetosPessoais.dll
+C:\Users\user\source\repos\ProjetosPessoais\obj\Debug\net7.0\refint\ProjetosPessoais.dll
+C:\Users\user\source\repos\ProjetosPessoais\obj\Debug\net7.0\ProjetosPessoais.pdb
+C:\Users\user\source\repos\ProjetosPessoais\obj\Debug\net7.0\ProjetosPessoais.genruntimeconfig.cache
+C:\Users\user\source\repos\ProjetosPessoais\obj\Debug\net7.0\ref\ProjetosPessoais.dll

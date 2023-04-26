@@ -8,24 +8,23 @@ namespace ConsoleCRUD
 {
     class MainClass
     {
-        public static void Media()
+        public static void status()
         {
             for (int i = 0; i < nomes.Count; i++)
             {
-                    double n1 = 0;
-                    double n2 = 0;
-                    double n3 = 0;
-                    double n4 = 0;
-                    int index = nomes.IndexOf(nomes[i]);
-                    n1 = Convert.ToDouble(notas1[index]);
-                    n2 = Convert.ToDouble(notas2[index]);
-                    n3 = Convert.ToDouble(notas3[index]);
-                    n4 = Convert.ToDouble(notas4[index]);
-                    double media = (n1 + n2 + n3 + n4) / 4;
-                    medias.Add(media);
-                    WriteLine($"A média do aluno {nomes[i]} foi de {Convert.ToDouble(medias[i])}");
-                    WriteLine(index);
-                
+                medias[i] = Convert.ToDouble(medias[i]);
+                if (medias[i] > 7)
+                {
+                    statusR.Add("Aprovado");
+                }
+                else if (medias[i] > 5)
+                {
+                    statusR.Add("Recuperação");
+                }
+                else if (medias[i] >= 0)
+                {
+                    statusR.Add("Reprovado");
+                } 
             }
         }
         public static void printMenu(string[] options)
@@ -107,6 +106,7 @@ namespace ConsoleCRUD
         static List<string> recuperacao = new List<string>();
         static List<string> aprovados = new List<string>();
         static List<double> medias = new List<double>();
+        static List<string> statusR = new List<string>();
         private static void Cadastrar()
         {
             Clear();
@@ -249,8 +249,28 @@ namespace ConsoleCRUD
             int pos = 0;
             foreach (var item in nomes)
             {
-                    WriteLine($"Nome: {item}, 1º Nota: {notas1[pos]}, 2º Nota: {notas2[pos]}, 3º Nota: {notas3[pos]}, 4º Nota: {notas4[pos]}, Média: {medias[pos]}, Status: \n");
+                WriteLine($"Nome: {item}, 1º Nota: {notas1[pos]}, 2º Nota: {notas2[pos]}, 3º Nota: {notas3[pos]}, 4º Nota: {notas4[pos]}, Média: {medias[pos]}, Status: {statusR[pos]} \n");
                 pos++;
+            }
+        }
+        public static void Media()
+        {
+            for (int i = 0; i < nomes.Count; i++)
+            {
+                double n1 = 0;
+                double n2 = 0;
+                double n3 = 0;
+                double n4 = 0;
+                int index = nomes.IndexOf(nomes[i]);
+                n1 = Convert.ToDouble(notas1[index]);
+                n2 = Convert.ToDouble(notas2[index]);
+                n3 = Convert.ToDouble(notas3[index]);
+                n4 = Convert.ToDouble(notas4[index]);
+                double media = (n1 + n2 + n3 + n4) / 4;
+                medias.Add(media);
+                WriteLine($"A média do aluno {nomes[i]} foi de {Convert.ToDouble(medias[i])}");
+                status();
+
             }
         }
         private static void Gravar()
@@ -259,7 +279,7 @@ namespace ConsoleCRUD
             try
             {
                 StreamWriter dados;
-                string arquivo = @"C:\Users\Aluno\source\repos\ConsoleApp2\nomes.txt";
+                string arquivo = @"C:\Users\user\source\repos\ProjetosPessoais\nomes.txt";
                 dados = File.CreateText(arquivo);
                 foreach (var item in nomes)
                 {
@@ -267,7 +287,7 @@ namespace ConsoleCRUD
                 }
                 dados.Close();
                 StreamWriter dados1;
-                string arquivo1 = @"C:\Users\Aluno\source\repos\ConsoleApp2\notas1.txt";
+                string arquivo1 = @"C:\Users\user\source\repos\ProjetosPessoais\notas1.txt";
                 dados1 = File.CreateText(arquivo1);
                 foreach (var item1 in notas1)
                 {
@@ -275,7 +295,7 @@ namespace ConsoleCRUD
                 }
                 dados1.Close();
                 StreamWriter dados2;
-                string arquivo2 = @"C:\Users\Aluno\source\repos\ConsoleApp2\notas2.txt";
+                string arquivo2 = @"C:\Users\user\source\repos\ProjetosPessoais\notas2.txt";
                 dados2 = File.CreateText(arquivo2);
                 foreach (var item2 in notas2)
                 {
@@ -283,7 +303,7 @@ namespace ConsoleCRUD
                 }
                 dados2.Close();
                 StreamWriter dados3;
-                string arquivo3 = @"C:\Users\Aluno\source\repos\ConsoleApp2\notas3.txt";
+                string arquivo3 = @"C:\Users\user\source\repos\ProjetosPessoais\notas3.txt";
                 dados3 = File.CreateText(arquivo3);
                 foreach (var item3 in notas3)
                 {
@@ -291,13 +311,21 @@ namespace ConsoleCRUD
                 }
                 dados3.Close();
                 StreamWriter dados4;
-                string arquivo4 = @"C:\Users\Aluno\source\repos\ConsoleApp2\notas4.txt";
+                string arquivo4 = @"C:\Users\user\source\repos\ProjetosPessoais\notas4.txt";
                 dados4 = File.CreateText(arquivo4);
                 foreach (var item4 in notas4)
                 {
                     dados4.WriteLine($"{item4}");
                 }
                 dados4.Close();
+                StreamWriter Media;
+                string arquivo5 = @"C:\Users\user\source\repos\ProjetosPessoais\medias.txt";
+                Media = File.CreateText(arquivo5);
+                foreach (var media in medias)
+                {
+                    Media.WriteLine($"{media}");
+                }
+                Media.Close();
                 WriteLine();
             }
             catch (Exception e)
@@ -313,30 +341,35 @@ namespace ConsoleCRUD
         {
             Clear();
             WriteLine(">>>> LENDO AQUIVO <<<<\n");
-            var nome = File.ReadAllLines(@"C:\Users\Aluno\source\repos\ConsoleApp2\nomes.txt");
+            var nome = File.ReadAllLines(@"C:\Users\user\source\repos\ProjetosPessoais\nomes.txt");
             for (int i = 0; i < nome.Length; i++)
             {
                 nomes.Add(nome[i]);
             }
-            var nota1 = File.ReadAllLines(@"C:\Users\Aluno\source\repos\ConsoleApp2\notas1.txt");
+            var nota1 = File.ReadAllLines(@"C:\Users\user\source\repos\ProjetosPessoais\notas1.txt");
             for (int x = 0; x < nota1.Length; x++)
             {
                 notas1.Add(Convert.ToInt32(nota1[x]));
             }
-            var nota2 = File.ReadAllLines(@"C:\Users\Aluno\source\repos\ConsoleApp2\notas2.txt");
+            var nota2 = File.ReadAllLines(@"C:\Users\user\source\repos\ProjetosPessoais\notas2.txt");
             for (int x = 0; x < nota2.Length; x++)
             {
                 notas2.Add(Convert.ToInt32(nota2[x]));
             }
-            var nota3 = File.ReadAllLines(@"C:\Users\Aluno\source\repos\ConsoleApp2\notas3.txt");
+            var nota3 = File.ReadAllLines(@"C:\Users\user\source\repos\ProjetosPessoais\notas3.txt");
             for (int x = 0; x < nota3.Length; x++)
             {
                 notas3.Add(Convert.ToInt32(nota3[x]));
             }
-            var nota4 = File.ReadAllLines(@"C:\Users\Aluno\source\repos\ConsoleApp2\notas4.txt");
+            var nota4 = File.ReadAllLines(@"C:\Users\user\source\repos\ProjetosPessoais\notas4.txt");
             for (int x = 0; x < nota4.Length; x++)
             {
                 notas4.Add(Convert.ToInt32(nota4[x]));
+            }
+            var media = File.ReadAllLines(@"C:\Users\user\source\repos\ProjetosPessoais\medias.txt");
+            for (int x = 0; x < media.Length; x++)
+            {
+                medias.Add(Convert.ToDouble(media[x]));
             }
             WriteLine("\nLeitura de dados concuída!!");
         }
